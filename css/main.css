@@ -68,6 +68,8 @@ pre, code, kbd{
     width: 95%;
     margin: 0 auto;
     display: grid;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border: solid 1px;
     background-color: hsla(200, 90%, 90%, 1)
     grid-template-columns: 1fr 5fr;
@@ -156,7 +158,7 @@ nav a:hover{
     margin-right: 1em;
 }
 .second{
-    margin-left: 1em;
+/*    margin-left: 1em;*/
 }
 .col{
 /*    float: none;*/
@@ -208,7 +210,7 @@ p > img{
 }    
 .img{
     text-align: center;
-    float: left;
+/*    float: left;*/
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     font-size: 1.25em;
@@ -216,7 +218,7 @@ p > img{
     margin: 0.5em 0 1em 0;
     border-radius: 2px;
     text-align: center;
-    font-weight: 1000;
+/*    font-weight: 1000;*/
 
 }
 footer{
@@ -244,22 +246,27 @@ footer ul{
     margin: 0.2em;
 }
 
+.col{
+     padding: 1rem;   
+    }
+
 @media screen and (max-width: 600px){
-        
-    .wrapper{
-        width: 95%;
-        height: auto;
+    
+    .col.first > h2{
+    font: bold 1.618rem 'PT Serif', 'more font stack stuff',serif;
+}
+    .img{
+        width: 100%;
+        float: none;
+    }
+    h1{
+        font-size: 2rem;
     }
     
-    h1{
-        font-size: 27rem;
-    }
-    .col h2{
-        font-size: 0.5rem;
-    }
     .col p{
         font-size: 1em;
     }
+    
 
     nav>ul{
         display: flex;
@@ -269,14 +276,20 @@ footer ul{
     nav>li{
         font-size: 0.5em;
     }
-    main{
-        width: 100%;
+    .main{
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+/*
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
             'm'
             'n'
+*/
     }
+/*
     .col first{
         display: grid;
         grid-area: m;
@@ -285,6 +298,7 @@ footer ul{
         display: grid;
         grid-area: n;
     }
+*/
     
     .col h1{
         display:flex;
@@ -293,6 +307,14 @@ footer ul{
     footer a{
         font-size:1em;
     }
+    footer ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+    }
+    footer li{
+        font-size: 1.1em;
+    }
     
 }
 @media screen and (max-width: 800px){
@@ -300,10 +322,13 @@ footer ul{
         font-size: 2.5em;
     }
     .col h2{
-        font-size: 2em;
+        font-size: 1em;
     }
     p{
-        font-size: 1em;
+        font-size: 1.5em;
+    }
+    .col p{
+        font-size:1.5em;
     }
     nav>li{
         font-size: 1em;
@@ -312,10 +337,15 @@ footer ul{
         width: 99%;
         margin: auto;
     }
-    footer>li{
+    footer li{
+        font-size: 1.4em;
+    }
+    footer ul{
         font-size: 1em;
     }
 }
+
+
 @media screen and (max-width: 1200px){
      
     .wrapper{
@@ -348,9 +378,9 @@ footer ul{
     }
    
     .main{
-        width:99%; 
+        width:100%; 
         height: 100%;
-        margin: 0px auto;
+        margin: auto;
         padding: 10px;
 /*        margin-right: 3em;*/
     }
@@ -360,7 +390,7 @@ footer ul{
         font-size:3em;
     }
     footer{
-        width: 99%;
+        width: 100%;
         margin: auto;
     }
 }
